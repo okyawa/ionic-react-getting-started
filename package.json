@@ -3,9 +3,11 @@
   "version": "0.0.1",
   "private": true,
   "dependencies": {
+    "@capacitor/android": "3.0.2",
     "@capacitor/app": "1.0.2",
     "@capacitor/core": "3.0.2",
     "@capacitor/haptics": "1.0.2",
+    "@capacitor/ios": "3.0.2",
     "@capacitor/keyboard": "1.0.2",
     "@capacitor/status-bar": "1.0.2",
     "@ionic/react": "^5.5.0",
@@ -42,7 +44,10 @@
   },
   "scripts": {
     "start": "ionic serve",
-    "build": "react-scripts build",
+    "build": "ionic build",
+    "ios": "ionic cap open ios",
+    "android": "ionic cap open android",
+    "serve": "serve -s build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -66,7 +71,8 @@
   },
   "devDependencies": {
     "@capacitor/cli": "3.0.2",
-    "@ionic/cli": "^6.16.3"
+    "@ionic/cli": "^6.16.3",
+    "serve": "^12.0.0"
   },
   "description": "An Ionic project"
 }
